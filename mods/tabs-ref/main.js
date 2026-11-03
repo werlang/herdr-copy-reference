@@ -67,7 +67,15 @@ export default class Tabs extends View {
   render() {
     const t = theme();
     const space = spaces().find(p => p.active);
-    const shown = space?.tabs ?? [];
+    const tabs = space?.tabs ?? [];
+    const allPanes = panes();
+    // A pinned space's placeholder tab exists only to keep the space alive.
+    // Hide it while the space has other tabs; show it only when it is the last one.
+    const shown = tabs.filter((tab) => {
+      if (tabs.length <= 1) return true;
+      const inside = allPanes.filter((pane) => pane.tab === tab.id);
+      return !(inside.length > 0 && inside.every((pane) => pane.mod === "space-pin"));
+    });
     const stop = (_e, cx) => cx.stop_propagation();
     const button = (id, label, action) => div().id(id).size(26).flex_none().flex().items_center().justify_center().rounded(6).text_color(t.dim).hover(s => s.bg(t.hover).text_color(t.foreground))
       .on_mouse_down("left", stop).on_click(action).child(label);

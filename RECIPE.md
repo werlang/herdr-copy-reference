@@ -19,7 +19,7 @@ A compact context menu with the terminal's program icon, its action, and the `hc
 ## Built from
 
 - `mods/ref-menu/` — clone of the shipped `menu`; adds the `ref.copy` item and clipboard handling. `ref.js` builds the line; `copy.svg` is the icon.
-- `mods/tabs-ref/` — clone of the shipped `tabs`; opens `ref-menu` on right-click and sizes the popup to its rows.
+- `mods/tabs-ref/` — clone of the shipped `tabs`; opens `ref-menu` on right-click, sizes the popup to its rows, and hides a `space-pin` placeholder tab while the space has other tabs (the pinned-space plugin's tab appears only when it is the last one).
 - A personal layout clone (`werlang.json`) wires the `tabs` block to `tabs-ref` and the root `terminal_menu` to `ref-menu`.
 - `ref.js` uses `terminals()`, `panes()`, `spaces()`, and `hc` addresses; it has no `herdr` imports so the line shape can be tested with plain Node.
 - Clipboard: `osascript` on macOS, `Set-Clipboard` on Windows, `wl-copy`/`xclip` on Linux.

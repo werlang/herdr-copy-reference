@@ -62,6 +62,7 @@ herdr-app check ~/.config/herdr-app/mods/tabs-ref
 
 - `mods/ref-menu` is a clone of Herdr's `menu`; `ref.js` builds the reference line and `copy.svg` is the menu icon.
 - `mods/tabs-ref` is a clone of `tabs`; it opens `ref-menu` on tab right-click and sizes the popup to its rows.
+- `tabs-ref` also hides a tab whose panes are all `space-pin` while the space has other tabs; the pinned-space placeholder appears only when it is the last tab.
 - The layout root's `terminal_menu` routes pane right-clicks to `ref-menu` too.
 - On a TUI that captures the mouse, use **Shift+right-click** to open Herdr's menu.
 - `herdr-app do mod.open --name ref-menu` opens the current tab's references without right-clicking.
