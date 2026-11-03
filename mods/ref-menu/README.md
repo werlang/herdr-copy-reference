@@ -29,7 +29,7 @@ fork:
 - `mods/ref-menu/` — clone of `menu` with the copy item (`ref.js` builds the line).
 - `mods/tabs-ref/` — clone of `tabs` that opens `ref-menu` for tab right-clicks
   and sizes the popup to its rows.
-- `layouts/main-ref.json` — clone of `main`: the tabs block uses `tabs-ref`, and
+- `layouts/werlang.json` — clone of `main`: the tabs block uses `tabs-ref`, and
   root `terminal_menu: "ref-menu"` routes pane right-clicks here too.
 
 All three are personal (never updated by Herdr). The shipped `main`, `tabs` and

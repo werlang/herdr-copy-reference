@@ -17,7 +17,7 @@ O script copia `mods/ref-menu` e `mods/tabs-ref` para a pasta live e roda `herdr
 
 ## Ligação no layout
 
-O layout pessoal `~/.config/herdr-app/layouts/main-ref.json` usa:
+O layout pessoal `~/.config/herdr-app/layouts/werlang.json` usa:
 
 - bloco `tabs` -> `tabs-ref`
 - root `terminal_menu` -> `ref-menu`
